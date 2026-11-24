@@ -3,15 +3,15 @@
 import React, { useState, useEffect } from 'react';
 import { StorageService } from '@/lib/storage';
 import { Clinic, Doctor, DiseaseSymptom, QueueStatus, AuthUser } from '@/types';
-import {
-  Search,
-  MapPin,
-  Star,
-  Stethoscope,
-  Clock,
-  Pill,
-  ShieldCheck,
-  Calendar,
+import { 
+  Search, 
+  MapPin, 
+  Star, 
+  Stethoscope, 
+  Clock, 
+  Pill, 
+  ShieldCheck, 
+  Calendar, 
   ArrowRight,
   Activity,
   CheckCircle2,
@@ -163,7 +163,7 @@ export default function HomePage() {
       const matchName = clinic.name.toLowerCase().includes(q);
       const matchAddress = clinic.address.toLowerCase().includes(q);
       const matchSpecialty = clinic.specialties.some(s => s.toLowerCase().includes(q));
-      const matchDisease = diseases.some(d =>
+      const matchDisease = diseases.some(d => 
         (d.name.toLowerCase().includes(q) || d.symptoms.some(s => s.toLowerCase().includes(q))) &&
         clinic.specialties.includes(d.recommendedSpecialty)
       );
@@ -223,7 +223,7 @@ export default function HomePage() {
 
   return (
     <div className="bg-[#fcfdfd] text-slate-900 selection:bg-emerald-500 selection:text-white relative overflow-x-hidden">
-
+      
       {/* Interactive Toast Notification */}
       {toastMessage && (
         <div className="fixed bottom-6 right-6 z-50 bg-white/95 backdrop-blur-md text-slate-900 text-xs font-bold px-4 py-3 rounded-2xl shadow-xl border border-emerald-200 flex items-center gap-3 animate-bounce">
@@ -328,7 +328,7 @@ export default function HomePage() {
 
       {/* 1. HERO SECTION - Modern Aesthetic SaaS with Interactive Waiting Widget */}
       <section className="relative pt-12 pb-20 lg:pt-16 lg:pb-24 overflow-hidden mesh-glow subtle-dot-grid border-b border-slate-200/80">
-
+        
         {/* Soft Ambient Pastel Glow Orbs */}
         <div className="absolute top-10 left-1/4 w-96 h-96 bg-emerald-200/35 rounded-full blur-3xl pointer-events-none animate-pulse-glow" />
         <div className="absolute top-28 right-12 w-80 h-80 bg-teal-200/30 rounded-full blur-3xl pointer-events-none animate-pulse-glow" style={{ animationDelay: '2s' }} />
@@ -336,10 +336,10 @@ export default function HomePage() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-
+            
             {/* Left Column: SaaS Value Proposition */}
             <div className="lg:col-span-7 space-y-6">
-
+              
               {/* Modern Trust Headline (Explicitly 2 Lines & Responsive) */}
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[44px] xl:text-[50px] font-black text-slate-950 tracking-tight leading-[1.2]">
                 <span className="block">Smart Online Booking</span>
@@ -412,7 +412,7 @@ export default function HomePage() {
 
             {/* Right Column: Light & Bright Interactive Product Mockup Widget */}
             <div className="lg:col-span-5 relative">
-
+              
               {/* Floating Decorative Pill Badges */}
               <div className="hidden xl:flex absolute -top-5 -left-8 z-20 items-center gap-2 glass-panel px-3.5 py-2 rounded-2xl shadow-lg border border-emerald-200 text-xs font-bold text-slate-800 animate-float">
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping" />
@@ -426,7 +426,7 @@ export default function HomePage() {
 
               <div className="relative mx-auto max-w-md lg:max-w-none">
                 <div className="bg-white/95 backdrop-blur-md rounded-3xl border border-emerald-100 shadow-2xl shadow-emerald-600/10 p-6 sm:p-7 space-y-5 transition-all">
-
+                  
                   {/* Widget Top Bar */}
                   <div className="flex items-center justify-between pb-3 border-b border-slate-100">
                     <div className="flex items-center gap-2">
@@ -455,10 +455,10 @@ export default function HomePage() {
                           {/* Google Reviews Badge for Doctor */}
                           <div className="flex items-center gap-1 bg-white px-2 py-0.5 rounded-lg border border-slate-200/80 shadow-2xs">
                             <svg className="w-3 h-3 shrink-0" viewBox="0 0 24 24">
-                              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
-                              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
-                              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
-                              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
+                              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
                             </svg>
                             <span className="text-[11px] font-bold text-amber-600">{currentHeroDoctor.rating} ★</span>
                           </div>
@@ -502,10 +502,11 @@ export default function HomePage() {
                               setInteractiveSlot(slot);
                               showToast(`Selected slot: ${slot} with ${currentHeroDoctor.name}`);
                             }}
-                            className={`py-2 text-xs font-bold rounded-xl transition-all ${isSelected
+                            className={`py-2 text-xs font-bold rounded-xl transition-all ${
+                              isSelected
                                 ? 'border border-emerald-600 bg-emerald-600 text-white shadow-xs scale-102'
                                 : 'border border-slate-200 bg-slate-50 text-slate-700 hover:border-emerald-300 hover:bg-emerald-50/40'
-                              }`}
+                            }`}
                           >
                             {slot}
                           </button>
@@ -571,7 +572,7 @@ export default function HomePage() {
       {/* 2. LIVE METRICS & COMPLIANCE TRUST BAR */}
       <section className="py-10 bg-white border-b border-slate-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-
+          
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="p-5 rounded-2xl bg-[#f8fafc] border border-slate-200/90 hover:border-emerald-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 space-y-1 text-center">
               <span className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight block">45,000+</span>
@@ -627,7 +628,7 @@ export default function HomePage() {
       {/* 3. INTERACTIVE CLINIC & DISEASE/SYMPTOM MATCHER */}
       <section id="clinics" className="py-20 bg-[#f8fafb] border-b border-slate-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-
+          
           <div className="text-center max-w-5xl mx-auto space-y-3">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[32px] xl:text-4xl font-black text-slate-950 tracking-tight sm:whitespace-nowrap">
               Find the Best Clinic for Your <span className="font-vibes text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl text-emerald-600 font-normal px-1">Health & Wellness</span>
@@ -686,7 +687,7 @@ export default function HomePage() {
             )}
 
             <button
-              type="button"
+              type="button" 
               className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-4 sm:px-5 py-2.5 rounded-xl text-xs transition shadow-xs shrink-0"
             >
               Search
@@ -700,7 +701,7 @@ export default function HomePage() {
                 <span className="text-xs font-bold uppercase tracking-wider text-slate-600">
                   Click a Condition to Match Verified Outpatient Clinics:
                 </span>
-                {/* {selectedDisease ? (
+                {selectedDisease ? (
                   <span className="inline-flex items-center gap-1 text-[11px] font-bold text-amber-700 bg-amber-50 border border-amber-200 px-2.5 py-0.5 rounded-full animate-pulse shadow-2xs">
                     <Pause className="w-3 h-3 text-amber-600" />
                     <span>Row Frozen (Condition Active)</span>
@@ -710,7 +711,7 @@ export default function HomePage() {
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping" />
                     <span>Running Row</span>
                   </span>
-                )} */}
+                )}
               </div>
 
               {selectedDisease && (
@@ -745,17 +746,19 @@ export default function HomePage() {
                       key={`${d.id}-${idx}`}
                       type="button"
                       onClick={() => handleSelectDisease(d)}
-                      className={`flex items-center gap-2.5 px-4 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 shrink-0 border select-none ${isSelected
+                      className={`flex items-center gap-2.5 px-4 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 shrink-0 border select-none ${
+                        isSelected
                           ? 'bg-emerald-600 text-white border-emerald-600 shadow-md ring-2 ring-emerald-400 scale-105'
                           : 'bg-white text-slate-800 border-slate-200/90 hover:border-emerald-400 hover:bg-emerald-50/60 hover:shadow-xs hover:scale-102'
-                        }`}
+                      }`}
                     >
                       <span className="whitespace-nowrap">{d.name}</span>
                       <span
-                        className={`text-[10px] px-2 py-0.5 rounded-full font-semibold whitespace-nowrap ${isSelected
+                        className={`text-[10px] px-2 py-0.5 rounded-full font-semibold whitespace-nowrap ${
+                          isSelected
                             ? 'bg-emerald-700 text-white'
                             : 'bg-slate-100 text-slate-600 border border-slate-200/60'
-                          }`}
+                        }`}
                       >
                         {d.recommendedSpecialty}
                       </span>
@@ -772,8 +775,9 @@ export default function HomePage() {
               <div className="space-y-1.5">
                 <div className="flex items-center gap-2.5">
                   <h3 className="font-extrabold text-slate-900 text-base">{selectedDisease.name}</h3>
-                  <span className={`text-[10px] font-bold uppercase px-2.5 py-0.5 rounded-full ${selectedDisease.severity === 'high' ? 'bg-rose-100 text-rose-800' : 'bg-amber-100 text-amber-800'
-                    }`}>
+                  <span className={`text-[10px] font-bold uppercase px-2.5 py-0.5 rounded-full ${
+                    selectedDisease.severity === 'high' ? 'bg-rose-100 text-rose-800' : 'bg-amber-100 text-amber-800'
+                  }`}>
                     {selectedDisease.severity} Priority
                   </span>
                 </div>
@@ -823,10 +827,10 @@ export default function HomePage() {
                       {/* Google Verified Review Badge */}
                       <div className="flex items-center gap-1.5 bg-white border border-slate-200 shadow-2xs px-3 py-1.5 rounded-xl shrink-0">
                         <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24">
-                          <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
-                          <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
-                          <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
-                          <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
+                          <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                          <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                          <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                          <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
                         </svg>
                         <div className="text-right">
                           <div className="flex items-center gap-1 justify-end">
@@ -848,13 +852,13 @@ export default function HomePage() {
                     <div className="p-2.5 rounded-xl bg-slate-50/80 border border-slate-200/80 text-slate-600 text-[11px] flex items-start gap-2">
                       <span className="text-amber-500 font-bold text-xs shrink-0">“</span>
                       <p className="flex-1 leading-snug">
-                        {clinic.id === 'cl-1'
+                        {clinic.id === 'cl-1' 
                           ? 'Extremely clean clinic with zero waiting room hassle. Token was called right on schedule! Dr. Rajesh is very attentive.'
                           : clinic.id === 'cl-2'
-                            ? 'Dr. Priya took time to explain my skin routine. Best clinical dermatology & laser care in the city.'
-                            : clinic.id === 'cl-3'
-                              ? 'Advanced non-invasive ECG monitoring. Very polite reception staff and prompt consultation.'
-                              : 'Painless root canal treatment and transparent consultation fees. Very clean facilities.'}
+                          ? 'Dr. Priya took time to explain my skin routine. Best clinical dermatology & laser care in the city.'
+                          : clinic.id === 'cl-3'
+                          ? 'Advanced non-invasive ECG monitoring. Very polite reception staff and prompt consultation.'
+                          : 'Painless root canal treatment and transparent consultation fees. Very clean facilities.'}
                         <span className="font-semibold text-slate-800 ml-1 inline text-[10px] text-slate-500">— Verified Google Patient • 5.0 ★</span>
                       </p>
                     </div>
@@ -885,7 +889,7 @@ export default function HomePage() {
                           <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                           <span>{clinic.name.split(' ')[0]} • {clinic.distanceKm} km</span>
                         </div>
-
+                        
                         {/* Ripple Ping Marker */}
                         <div className="relative flex items-center justify-center">
                           <span className="absolute w-7 h-7 rounded-full bg-emerald-500/35 animate-ping" />
@@ -898,10 +902,10 @@ export default function HomePage() {
                       {/* Google Maps Mini Watermark */}
                       <div className="absolute top-2 left-2 flex items-center gap-1.5 bg-white/95 backdrop-blur-xs px-2.5 py-0.5 rounded-lg border border-slate-200/80 shadow-2xs text-[10px] font-bold text-slate-700">
                         <svg className="w-3 h-3 shrink-0" viewBox="0 0 24 24">
-                          <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
-                          <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
-                          <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
-                          <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
+                          <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                          <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                          <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                          <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
                         </svg>
                         <span>Google Maps</span>
                       </div>
@@ -1022,7 +1026,7 @@ export default function HomePage() {
       {/* 4. FOUR-PILLAR FEATURE SHOWCASE WITH INTERACTIVE TABS */}
       <section id="features" className="py-20 bg-white border-b border-slate-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-
+          
           <div className="text-center max-w-5xl mx-auto space-y-3">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[32px] xl:text-4xl font-black text-slate-950 tracking-tight sm:whitespace-nowrap">
               Everything Your Clinic Needs for <span className="font-vibes text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl text-emerald-600 font-normal px-1">Effortless Care</span>
@@ -1043,10 +1047,11 @@ export default function HomePage() {
               <button
                 key={tab.id}
                 onClick={() => setActiveFeatureTab(tab.id)}
-                className={`flex items-center gap-2 px-5 py-3 rounded-2xl text-xs font-extrabold transition-all ${activeFeatureTab === tab.id
+                className={`flex items-center gap-2 px-5 py-3 rounded-2xl text-xs font-extrabold transition-all ${
+                  activeFeatureTab === tab.id
                     ? 'bg-emerald-600 text-white shadow-md shadow-emerald-600/20 scale-105'
                     : 'bg-slate-100 text-slate-600 hover:bg-slate-200/70'
-                  }`}
+                }`}
               >
                 {tab.icon}
                 <span>{tab.label}</span>
@@ -1290,7 +1295,7 @@ export default function HomePage() {
       {/* 5. MULTI-ROLE ECOSYSTEM MATRIX WITH INTERACTIVE WORKFLOW SWITCHER */}
       <section className="py-20 bg-[#f8fafc] border-b border-slate-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-
+          
           <div className="text-center max-w-5xl mx-auto space-y-3">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[32px] xl:text-4xl font-black text-slate-950 tracking-tight sm:whitespace-nowrap">
               Designed for <span className="font-vibes text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl text-emerald-600 font-normal px-1">Every Stakeholder</span> in Your Clinic
@@ -1301,7 +1306,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
+            
             {/* Patient Role */}
             <div className="bg-white p-6 rounded-3xl border border-slate-200 hover:border-emerald-400 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 space-y-4 flex flex-col justify-between">
               <div className="space-y-3">
@@ -1373,7 +1378,7 @@ export default function HomePage() {
       {/* 6. COMPARISON MATRIX: TRADITIONAL CLINIC VS CLINICPULSE */}
       <section id="how-it-works" className="py-20 bg-white border-b border-slate-200/80">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-
+          
           <div className="text-center max-w-5xl mx-auto space-y-3">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[32px] xl:text-4xl font-black text-slate-900 tracking-tight sm:whitespace-nowrap">
               Why Healthcare Practices <span className="font-vibes text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl text-emerald-600 font-normal px-1">Upgrade</span> to ClinicPulse
@@ -1431,7 +1436,7 @@ export default function HomePage() {
       {/* 7. INTERACTIVE MULTI-ROOM LIVE WAITING BOARD SIMULATION */}
       <section className="py-20 bg-[#f8fafb] border-b border-slate-200/80">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-
+          
           <div className="text-center max-w-5xl mx-auto space-y-3">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[32px] xl:text-4xl font-black text-slate-900 tracking-tight sm:whitespace-nowrap">
               Live Interactive <span className="font-vibes text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl text-emerald-600 font-normal px-1">Waiting Room</span> Board
@@ -1443,11 +1448,11 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {multiRoomTokens.map((room, idx) => {
-              const roomTheme = idx === 0
+              const roomTheme = idx === 0 
                 ? { bg: 'from-emerald-50/80 via-teal-50/40 to-white', border: 'border-emerald-200/90', text: 'text-emerald-700', badge: 'bg-emerald-50 text-emerald-800 border-emerald-200', btn: 'from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 shadow-emerald-600/20' }
-                : idx === 1
-                  ? { bg: 'from-sky-50/80 via-cyan-50/40 to-white', border: 'border-sky-200/90', text: 'text-sky-700', badge: 'bg-sky-50 text-sky-800 border-sky-200', btn: 'from-sky-600 to-cyan-600 hover:from-sky-700 hover:to-cyan-700 shadow-sky-600/20' }
-                  : { bg: 'from-purple-50/80 via-indigo-50/40 to-white', border: 'border-purple-200/90', text: 'text-purple-700', badge: 'bg-purple-50 text-purple-800 border-purple-200', btn: 'from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 shadow-purple-600/20' };
+                : idx === 1 
+                ? { bg: 'from-sky-50/80 via-cyan-50/40 to-white', border: 'border-sky-200/90', text: 'text-sky-700', badge: 'bg-sky-50 text-sky-800 border-sky-200', btn: 'from-sky-600 to-cyan-600 hover:from-sky-700 hover:to-cyan-700 shadow-sky-600/20' }
+                : { bg: 'from-purple-50/80 via-indigo-50/40 to-white', border: 'border-purple-200/90', text: 'text-purple-700', badge: 'bg-purple-50 text-purple-800 border-purple-200', btn: 'from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 shadow-purple-600/20' };
 
               return (
                 <div
@@ -1509,7 +1514,7 @@ export default function HomePage() {
       {/* 8. VERIFIED DOCTOR & CLINIC DIRECTOR TESTIMONIALS */}
       <section id="specialists" className="py-20 bg-white border-b border-slate-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-
+          
           <div className="text-center max-w-5xl mx-auto space-y-3">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[32px] xl:text-4xl font-black text-slate-900 tracking-tight sm:whitespace-nowrap">
               Trusted by Clinic Directors & <span className="font-vibes text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl text-emerald-600 font-normal px-1">Specialists</span>
@@ -1517,7 +1522,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-
+            
             <div className="p-6 sm:p-7 rounded-3xl bg-[#f8fafc] border border-slate-200/80 hover:border-emerald-300 hover:shadow-lg transition-all space-y-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center text-amber-400">
@@ -1624,7 +1629,7 @@ export default function HomePage() {
       {/* 9. FREQUENTLY ASKED QUESTIONS (FAQ) ACCORDION */}
       <section id="faq" className="py-20 bg-[#f8fafb] border-b border-slate-200/80">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-
+          
           <div className="text-center max-w-5xl mx-auto space-y-3">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[32px] xl:text-4xl font-black text-slate-900 tracking-tight sm:whitespace-nowrap">
               Frequently Asked <span className="font-vibes text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl text-emerald-600 font-normal px-1">Questions</span>
@@ -1667,7 +1672,7 @@ export default function HomePage() {
 
       {/* 10. LUXURY LIGHT & BRIGHT AESTHETIC BOTTOM CTA BANNER */}
       <section className="py-24 bg-gradient-to-br from-emerald-600 via-teal-600 to-emerald-800 text-white relative overflow-hidden">
-
+        
         {/* Ambient background blur orbs */}
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl pointer-events-none animate-pulse-glow" />
         <div className="absolute bottom-0 left-10 w-80 h-80 bg-teal-400/20 rounded-full blur-3xl pointer-events-none animate-pulse-glow" />
